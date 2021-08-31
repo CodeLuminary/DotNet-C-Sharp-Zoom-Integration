@@ -1,2 +1,181 @@
-﻿body {
+﻿*{box-sizing: border-box; font-family: Arial, Helvetica, sans-serif}
+body {
+    padding: 0px !important; margin: 0px !important; background-color: #f2f2f2;/*Disable browsers default spacing*/
+}
+[class*="col-"] {
+    float: left;
+}
+.div_navbar {
+    background: rgba(230,230,230,0.8);
+    padding: 10px 4%;
+    border-bottom: 2px solid #811eb8;
+}
+
+.navbar-brand {
+    color: #811eb8;
+    font-size: 36px;
+}
+.whiteBack {
+    background-color: white;
+    padding: 20px 5% !important;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d9d9d9;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.div_list {
+    position:fixed;height:100% !important;
+}
+.div_list + div {
+    float:right;padding: 35px 5% 20px;
+}
+.div_list ul {
+    list-style-type:none; padding-top:0px; 
+}
+.div_list ul li {
+    padding: 10px 15px;text-decoration: none;
+}
+.div_list ul:first-child{
+    padding-top: 50px;
+}
+.div_list ul:last-child{
+    padding-bottom: 25px;
+}
+.div_list ul li a{
+    color: #262626;
+    font-size: 14px;
+     line-height: 1.42857143;
+    text-decoration:none !important;
+    outline: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.div_list ul li a:hover{
+    text-decoration:none;color: #811eb8;
+}
+.div_list ul li a:active{
+    text-decoration:none !important;
+}
+.div_list ul li:hover{
+     background-color:#d9d9d9;color: #811eb8;
+}
+.div_list ul li:hover{
+    background-color:#d9d9d9;color: #811eb8;
+}
+.div_list2{
+    background-color:#eaeaea;height:100%;position:fixed;padding:0px
+}
+.li_activeBackground{
+    background-color:#d9d9d9;color: #811eb8;text-decoration:none;
+}
+.horTab ul li {
+    display: inline;
+}
+.horTab {
+    padding: 30px 10px 10px !important;
+}
+a {
+    text-decoration: none
+}
+p {
+    margin-top: 0px;
+    padding: 0px;
+    outline: none !important;
+}
+select, input {
+    border-radius: 5px;
+    margin: 5px 0px 20px;
+    padding: 10px;
+}
+select, input[type=text], input[type=password], textarea {
+width: 400px;
+}
+.modal select, .modal input[type=text], .modal input[type=password], .modal textarea {
+    width: 100% !important;
+}
+@media only screen and (max-width: 768px) {
+    select, input[type=text], input[type=password], textarea {
+        width: 100%;
+    }
+}
+#UpdatePanel2, #UpdatePanel1 {
+    height: 50px;
+}
+.fileInput input, textarea {
+    border-radius: 5px !important;
+}
+.purInput {
+    border-color: #811eb8;
+    background: rgba(230,230,230,0.8);
+}
+.lightGreenInput {
+    border-color: #41aeb5;
+}
+ul {
+    padding: 0px;
+}
+.si_table, .si_table th, .si_table td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+    .si_table td, .si_table th {
+        padding: 10px;
+    }
+
+#div_list ul {
+    padding-left: 10px;
+    padding-right: 10px;margin: 0px; padding-top: 10px !important;
+}
+
+.div_navbar ul {
+    list-style-type: none;
+    float: right;
+}
+
+.div_navbar ul li {
+    display: inline;
+}
+
+.div_navbar ul li a {
+    color: #080808;
+    padding-left: 5px;
+}
+
+/*This is meant to be used if the tag is to be of thesame
+ percentage across all screen*/
+.col-1{width: 8.33%}.col-2{width: 16.66%}.col-3{width: 25%}
+.col-4{width: 33.33%}.col-5{width: 41.66%}.col-6{width: 50%}
+.col-7{width: 58.33%}.col-8{width: 66.66%}.col-9{width: 75%}
+.col-10{width: 83.33%}.col-11{width: 91.66%}.col-12{width: 100%}
+/*This is for mobile view which usually range from 0px - 768px*/
+@media only screen and (max-width: 767px){
+    .col-xs-1{width: 8.33%}.col-xs-2{width: 16.66%}.col-xs-3{width: 25%}
+    .col-xs-4{width: 33.33%}.col-xs-5{width: 41.66%}.col-xs-6{width: 50%}
+    .col-xs-7{width: 58.33%}.col-xs-8{width: 66.66%}.col-xs-9{width: 75%}
+    .col-xs-10{width: 83.33%}.col-xs-11{width: 91.66%}.col-xs-12{width: 100%}
+    #desk{display:none}
+}
+/*This is for tablet which usually range from 768px - 991px*/
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .col-sm-1{width: 8.33%}.col-sm-2{width: 16.66%}.col-sm-3{width: 25%}
+    .col-sm-4{width: 33.33%}.col-sm-5{width: 41.66%}.col-sm-6{width: 50%}
+    .col-sm-7{width: 58.33%}.col-sm-8{width: 66.66%}.col-sm-9{width: 75%}
+    .col-sm-10{width: 83.33%}.col-sm-11{width: 91.66%}.col-sm-12{width: 100%}
+} 
+/*This is for medium devices which usually range from 992px - 1200px*/
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .col-md-1{width: 8.33%}.col-md-2{width: 16.66%}.col-md-3{width: 25%}
+    .col-md-4{width: 33.33%}.col-md-5{width: 41.66%}.col-md-6{width: 50%}
+    .col-md-7{width: 58.33%}.col-md-8{width: 66.66%}.col-md-9{width: 75%}
+    .col-md-10{width: 83.33%}.col-md-11{width: 91.66%}.col-md-1{width: 100%}
+}
+/*This is for extremely large screens which are usually greater than 1200*/
+@media only screen and (min-width: 1201px){
+    .col-lg-1{width: 8.33%}.col-lg-2{width: 16.66%}.col-lg-3{width: 25%}
+    .col-lg-4{width: 33.33%}.col-lg-5{width: 41.66%}.col-lg-6{width: 50%}
+    .col-lg-7{width: 58.33%}.col-lg-8{width: 66.66%}.col-lg-9{width: 75%}
+    .col-lg-10{width: 83.33%}.col-lg-11{width: 91.66%}.col-lg-12{width: 100%}
+}
+@media only screen and (min-width: 768px){
+    #mobTab{display:none}
 }
