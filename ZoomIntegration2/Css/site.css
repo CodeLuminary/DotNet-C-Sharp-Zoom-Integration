@@ -5,126 +5,33 @@ body {
 [class*="col-"] {
     float: left;
 }
+
 .div_navbar {
     background: rgba(230,230,230,0.8);
     padding: 10px 4%;
-    border-bottom: 2px solid #811eb8;
 }
 
 .navbar-brand {
     color: #811eb8;
     font-size: 36px;
 }
-.whiteBack {
-    background-color: white;
-    padding: 20px 5% !important;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #d9d9d9;
-    overflow-x: scroll;
-    overflow-y: hidden;
-}
-.div_list {
-    position:fixed;height:100% !important;
-}
-.div_list + div {
-    float:right;padding: 35px 5% 20px;
-}
-.div_list ul {
-    list-style-type:none; padding-top:0px; 
-}
-.div_list ul li {
-    padding: 10px 15px;text-decoration: none;
-}
-.div_list ul:first-child{
-    padding-top: 50px;
-}
-.div_list ul:last-child{
-    padding-bottom: 25px;
-}
-.div_list ul li a{
-    color: #262626;
-    font-size: 14px;
-     line-height: 1.42857143;
-    text-decoration:none !important;
-    outline: 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-.div_list ul li a:hover{
-    text-decoration:none;color: #811eb8;
-}
-.div_list ul li a:active{
-    text-decoration:none !important;
-}
-.div_list ul li:hover{
-     background-color:#d9d9d9;color: #811eb8;
-}
-.div_list ul li:hover{
-    background-color:#d9d9d9;color: #811eb8;
-}
-.div_list2{
-    background-color:#eaeaea;height:100%;position:fixed;padding:0px
-}
-.li_activeBackground{
-    background-color:#d9d9d9;color: #811eb8;text-decoration:none;
-}
-.horTab ul li {
-    display: inline;
-}
-.horTab {
-    padding: 30px 10px 10px !important;
-}
-a {
-    text-decoration: none
-}
-p {
-    margin-top: 0px;
-    padding: 0px;
-    outline: none !important;
-}
-select, input {
-    border-radius: 5px;
-    margin: 5px 0px 20px;
-    padding: 10px;
-}
-select, input[type=text], input[type=password], textarea {
-width: 400px;
-}
-.modal select, .modal input[type=text], .modal input[type=password], .modal textarea {
-    width: 100% !important;
-}
-@media only screen and (max-width: 768px) {
-    select, input[type=text], input[type=password], textarea {
-        width: 100%;
-    }
-}
-#UpdatePanel2, #UpdatePanel1 {
-    height: 50px;
-}
-.fileInput input, textarea {
-    border-radius: 5px !important;
-}
-.purInput {
-    border-color: #811eb8;
-    background: rgba(230,230,230,0.8);
-}
-.lightGreenInput {
-    border-color: #41aeb5;
-}
+
 ul {
     padding: 0px;
 }
+
 .si_table, .si_table th, .si_table td {
     border: 1px solid black;
     border-collapse: collapse;
 }
-    .si_table td, .si_table th {
-        padding: 10px;
-    }
+
+.si_table td, .si_table th {
+    padding: 10px;
+}
 
 #div_list ul {
     padding-left: 10px;
-    padding-right: 10px;margin: 0px; padding-top: 10px !important;
+    padding-right: 10px
 }
 
 .div_navbar ul {
@@ -139,6 +46,150 @@ ul {
 .div_navbar ul li a {
     color: #080808;
     padding-left: 5px;
+}
+
+a {
+    text-decoration: none
+}
+
+p {
+    margin-top: 0px;
+    padding: 0px;
+    outline: none !important;
+}
+
+select, input {
+    border-radius: 5px;
+    margin: 5px 0px 20px;
+    padding: 10px;
+}
+
+select, input[type=text], input[type=password], textarea {
+    width: 400px;
+}
+
+.modal select, .modal input[type=text], .modal input[type=password], .modal textarea {
+    width: 100% !important;
+}
+.purInput {
+    border-color: #811eb8;
+    background: rgba(230,230,230,0.8);
+}
+
+.lightGreenInput {
+    border-color: #41aeb5;
+}
+
+.horTab ul li {
+    display: inline;
+}
+
+.horTab {
+    padding: 30px 10px 10px !important;
+}
+
+.purBtn {
+    background: #811eb8;
+    color: white;
+    font-size: 24px;
+    border-style: none;
+    font-family: Georgia;
+    border-width: 1px;
+}
+
+.purBtn:hover {
+    border: 1px solid #811eb8;
+    color: #811eb8;
+    background-color: transparent;
+    cursor: pointer;
+}
+.navbar-fixed {
+    position: fixed;
+}
+
+#div_list {
+    background-color: #e6e6e6;
+    position: fixed;
+    height: 100%;border-right: 2px solid #fff;
+}
+
+#div_mainContent {
+    padding-top: 50px !important;
+    background-color: #f2f2f2;
+    float: right;
+}
+
+.div_list {
+    position: fixed;
+    height: 100% !important;
+}
+
+.div_list + div {
+    float: right;
+    padding: 35px 5% 20px;
+}
+
+.div_list ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.div_list ul li {
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.div_list ul:first-child {
+    padding-top: 50px;
+}
+
+.div_list ul:last-child {
+    padding-bottom: 25px;
+}
+
+.div_list ul li a {
+    color: #262626;
+    font-size: 14px;
+    line-height: 1.42857143;
+    text-decoration: none !important;
+    outline: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.div_list ul li a:hover {
+    text-decoration: none;
+    color: #811eb8;
+}
+
+.div_list ul li a:active {
+    text-decoration: none !important;
+}
+
+.div_list ul li:hover {
+    background-color: #d9d9d9;
+    color: #811eb8;
+}
+
+.div_list ul li:hover {
+    background-color: #d9d9d9;
+    color: #811eb8;
+}
+
+.div_list2 {
+    background-color: #eaeaea;
+    height: 100%;
+    position: fixed;
+    padding: 0px
+}
+
+.li_activeBackground {
+    background-color: #d9d9d9;
+    color: #811eb8;
+    text-decoration: none;
+}
+.navtop {
+    z-index: 1000;
+    border-bottom: 2px solid #41aeb5 !important;
 }
 
 /*This is meant to be used if the tag is to be of thesame
