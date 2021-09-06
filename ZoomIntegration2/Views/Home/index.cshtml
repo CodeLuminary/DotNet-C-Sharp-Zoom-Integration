@@ -23,7 +23,44 @@
                 </ul>
             </div>
             <div id="div_mainContent" class="col-md-10 col-sm-12 col-xs-12 col-lg-10">
-                <div></div>
+                <div id="div_onlineClass" class="horTab">
+                    <div>
+                        <ul>
+                            <li><a href="#" id="a_addOClass" class="btn btn-warning" onclick="ShowSubSelectedMenu(this.id, '#div_onlineClass', '#div_addOClass')">SCHEDULE ONLINE CLASS</a></li>
+                            <li><a href="#" id="a_viewOClasses" class="btn btn-warning" onclick="ShowSubSelectedMenu(this.id, '#div_onlineClass', '#div_viewOClasses')">VIEW ONLINE CLASS(ES)</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div id="div_addOClass">
+                            <div class="whiteBack">
+                                Class Topic*<br />
+                                <input class="lightGreenInput" type="text" id="classTopic" /><br />
+                                Course* <br />
+                                <select runat="server" id="onlineCourse" class="lightGreenInput onlineCourse"></select><br />
+                                Faculty/Class* <br />
+                                <select class="lightGreenInput sel_onlineFac" runat="server" id="onlineFac"></select> <br />
+                                Dept/Arm* <br />
+                                <select class="lightGreenInput sel_deptOnline" runat="server" id="onlineDept"></select><a class="btn btn-danger" href="#" onclick="addFac('.sel_deptOnline', 'div_deptOnline')">Add Dept/Arm</a><br />
+                                <div id="div_deptOnline"></div><br />
+                                Date*<br /><input class="lightGreenInput" type="date" id="onlineDate" /><br />
+                                Time*<br /><input class="lightGreenInput" type="time" id="onlineTime" /><br />
+                                Duration (in minutes)*<br /><input class="lightGreenInput" type="number" id="onlineClassDur" /><br />
+                                Teacher Video* <br /><input type="radio" name="hostVideo" onclick="hostVideo(1)" />&nbsp;ON&nbsp;<input checked="checked" type="radio" name="hostVideo" onclick="hostVideo(0)" />&nbsp;OFF<br />
+                                Students Video* <br /><input type="radio" name="parVideo" onclick="stuVideo(1)" />&nbsp;ON&nbsp;<input checked="checked" type="radio" name="parVideo" onclick="stuVideo(0)" />&nbsp;OFF&nbsp;<br />
+                                Meeting Option* <br />
+                                <input type="checkbox" id="allowStud" onclick="allStud()" />&nbsp;Allow students to join anytime<br />
+                                <input type="checkbox" id="mStud" onclick="muteStud()" />&nbsp;Mute students upon entry<br /><br />
+                                <button class="btn btn-danger" onclick="return createOnlineClass('/api/student')">Create Online Class</button>
+                            </div>
+                        </div>
+                        <div id="div_viewOClasses">
+                            <div class="whiteBack div_viewOClass" runat="server" id="div_viewAllOClass">
+                                No online class have been created.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 

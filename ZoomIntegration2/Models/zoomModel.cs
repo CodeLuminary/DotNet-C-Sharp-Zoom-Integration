@@ -5,7 +5,7 @@ using System.Web;
 
 namespace ZoomIntegration2.Models
 {
-    public class zoomModel
+    public class ZoomModel
     {
         public string topic { get; set; }
         public int duration { get; set; }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using ZoomIntegration2.Logic;
 
 namespace ZoomIntegration2.Controllers
 {
@@ -24,6 +25,7 @@ namespace ZoomIntegration2.Controllers
         // POST api/<controller>
         public void Post([FromBody] string value)
         {
+            ZoomLogic.createOlineClass(value);
         }
 
         // PUT api/<controller>/5
