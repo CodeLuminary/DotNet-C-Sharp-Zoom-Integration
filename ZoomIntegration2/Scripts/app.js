@@ -1,5 +1,6 @@
-﻿var body = document.querySelector("body"); 
+﻿var body = document.querySelector("body"); var createClass = document.getElementById("createClass");
 ShowSelectedMenu('a_dashboard', '#div_dashboard');
+createClass.onclick = createOnlineClass;
 
 function ShowSelectedMenu(a_menuItem, div_menuContent) {
     let contentDiv = document.querySelectorAll("#div_mainContent > div"); for (let i = 0; i < contentDiv.length; i++) { contentDiv[i].style.display = "none"; }
@@ -25,4 +26,20 @@ function ShowSubSelectedMenu(a_menuItem, div_menuContent, div_subMenuContent) {
     for (let i = 0; i < subLinks.length; i++) {
         subLinks[i].classList.remove("btn_changeBackground");
     } document.querySelector("#" + a_menuItem).className += " btn_changeBackground";
+}
+function createOnlineClass(url) {
+    var classTopic = document.getElementById("classTopic").value;
+    var dur = document.getElementById("onlineClassDur").value;
+    var onlineDate = document.getElementById("onlineDate").value;
+    var onlineTime = document.getElementById("onlineTime").value;
+    alert("working")
+    if (classTopic.length > 0 && onlineDate.length > 0 && onlineTime.length > 0) {
+       
+       // si_webpiS(url, msg, document.querySelector(".div_viewOClass"));
+    }
+    else {
+        alert("Please fill in all inputs!");
+    }
+
+    return false;
 }
