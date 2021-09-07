@@ -78,3 +78,13 @@ C:\Users\VICTOR\source\repos\ZoomIntegration2\ZoomIntegration2\obj\Debug\ZoomInt
 C:\Users\VICTOR\source\repos\ZoomIntegration2\ZoomIntegration2\obj\Debug\ZoomIntegration2.csproj.CopyComplete
 C:\Users\VICTOR\source\repos\ZoomIntegration2\ZoomIntegration2\obj\Debug\ZoomIntegration2.dll
 C:\Users\VICTOR\source\repos\ZoomIntegration2\ZoomIntegration2\obj\Debug\ZoomIntegration2.pdb
+C:\Users\VICTOR\source\repos\ZoomIntegration2\ZoomIntegration2\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\VICTOR\source\repos\ZoomIntegration2\ZoomIntegration2\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\VICTOR\source\repos\ZoomIntegration2\ZoomIntegration2\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\VICTOR\source\repos\ZoomIntegration2\ZoomIntegration2\bin\RestSharp.dll
+C:\Users\VICTOR\source\repos\ZoomIntegration2\ZoomIntegration2\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\VICTOR\source\repos\ZoomIntegration2\ZoomIntegration2\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\VICTOR\source\repos\ZoomIntegration2\ZoomIntegration2\bin\Microsoft.IdentityModel.Logging.xml
+C:\Users\VICTOR\source\repos\ZoomIntegration2\ZoomIntegration2\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\VICTOR\source\repos\ZoomIntegration2\ZoomIntegration2\bin\RestSharp.xml
+C:\Users\VICTOR\source\repos\ZoomIntegration2\ZoomIntegration2\bin\System.IdentityModel.Tokens.Jwt.xml

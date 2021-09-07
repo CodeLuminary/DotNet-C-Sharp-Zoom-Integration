@@ -1,5 +1,5 @@
 ﻿var body = document.querySelector("body"); var createClass = document.getElementById("createClass");
-ShowSelectedMenu('a_dashboard', '#div_dashboard');
+ShowSelectedMenu('a_dashboard', '#div_onlineClass');
 createClass.onclick = createOnlineClass;
 
 function ShowSelectedMenu(a_menuItem, div_menuContent) {
@@ -32,7 +32,6 @@ function createOnlineClass(url) {
     var dur = document.getElementById("onlineClassDur").value;
     var onlineDate = document.getElementById("onlineDate").value;
     var onlineTime = document.getElementById("onlineTime").value;
-    alert("working")
     if (classTopic.length > 0 && onlineDate.length > 0 && onlineTime.length > 0) {
        
        // si_webpiS(url, msg, document.querySelector(".div_viewOClass"));

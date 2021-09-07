@@ -18,7 +18,7 @@
         <div class="col-12">
             <div class="col-md-2 col-sm-3 col-xs-12 col-lg-2 div_list deskNav" id="div_list">
                 <ul style="text-decoration: none;list-style-type:none" class="adminList">
-                    <li class="li_separate"><a href="#" id="a_dashboard" onclick="ShowSelectedMenu(this.id,'#div_dashboard')"><span class="glyphicon glyphicon-home" style="color:#811eb8"></span>&nbsp;&nbsp;HOST MEETING</a></li>
+                    <li class="li_separate"><a href="#" id="a_dashboard" onclick="ShowSelectedMenu(this.id,'#div_onlineClass')"><span class="glyphicon glyphicon-home" style="color:#811eb8"></span>&nbsp;&nbsp;HOST MEETING</a></li>
                     <li><a href="#" id="a_schoolSettings" onclick="ShowSelectedMenu(this.id,'#div_studDetails')"><span class="glyphicon glyphicon-user" style="color:#811eb8"></span>&nbsp;&nbsp;CLIENT MEETING</a></li>
                 </ul>
             </div>
@@ -35,7 +35,7 @@
                             <div class="whiteBack">
                                 Class Topic*<br />
                                 <input class="lightGreenInput" type="text" id="classTopic" /><br />
-                             
+
                                 Date*<br /><input class="lightGreenInput" type="date" id="onlineDate" /><br />
                                 Time*<br /><input class="lightGreenInput" type="time" id="onlineTime" /><br />
                                 Duration (in minutes)*<br /><input class="lightGreenInput" type="number" id="onlineClassDur" /><br />
@@ -57,7 +57,20 @@
 
             </div>
         </div>
+        <div id="myModal2" class="modal2">
+            <div id="mobile_nav" class="modal-content2">
+                <div class="modal-header2">
+                    <span class="close2" onclick="closeSpan4()">&times;</span>
 
+                </div>
+                <div class="modal-body2" style="background-color:transparent !important">
+
+                    <a href="#" id="a_dashboard" onclick="ShowSelectedMenu(this.id,'#div_onlineClass')"><span class="glyphicon glyphicon-home" style="color:#811eb8"></span>&nbsp;&nbsp;HOST MEETING</a>
+                    <a href="#" id="a_schoolSettings" onclick="ShowSelectedMenu(this.id,'#div_studDetails')"><span class="glyphicon glyphicon-user" style="color:#811eb8"></span>&nbsp;&nbsp;CLIENT MEETING</a>
+                    <a href="#">Sign Out</a>
+                </div>
+            </div>
+        </div>
         <script src="~/Scripts/app.js"></script>
     </div>
 </body>
