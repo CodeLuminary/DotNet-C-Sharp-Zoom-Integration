@@ -27,13 +27,56 @@ function ShowSubSelectedMenu(a_menuItem, div_menuContent, div_subMenuContent) {
         subLinks[i].classList.remove("btn_changeBackground");
     } document.querySelector("#" + a_menuItem).className += " btn_changeBackground";
 }
-function createOnlineClass(url) {
-    var classTopic = document.getElementById("classTopic").value;
-    var dur = document.getElementById("onlineClassDur").value;
-    var onlineDate = document.getElementById("onlineDate").value;
-    var onlineTime = document.getElementById("onlineTime").value;
+var tvid = "false"; var stvid = "false"; var allowSt = "false"; var muteSt = "false";
+function hostVideo(n) {
+    if (n == 0) {
+        tvid = "false";
+    }
+    else if (n == 1) {
+        tvid = "true";
+    }
+}
+function stuVideo(n) {
+    if (n == 0) {
+        stvid = "false";
+    }
+    else if (n == 0) {
+        stvid = "true";
+    }
+}
+function allStud() {
+    let astud = document.getElementById("allowStud");
+    if (astud.checked) {
+        allowSt = "true";
+    }
+    else {
+        allowSt = "false";
+    }
+}
+function muteStud() {
+    let mStud = document.getElementById("mStud");
+    if (mStud.checked) {
+        muteSt = "true";
+    }
+    else {
+        muteSt = "false";
+    }
+}
+function createOnlineClass() {
+    let classTopic = document.getElementById("classTopic").value;
+    let dur = document.getElementById("onlineClassDur").value;
+    let onlineDate = document.getElementById("onlineDate").value;
+    let onlineTime = document.getElementById("onlineTime").value;
     if (classTopic.length > 0 && onlineDate.length > 0 && onlineTime.length > 0) {
-       
+
+        let zoom = {}
+        zoom.duration = dur; zoom.topic = classTopic;
+        zoom.hostvideo = tvid;
+        zoom.parvideo = stvid;
+        zoom.muteStud = muteSt;
+        zoom.allowstud = allowSt;
+        zoom.start_time = onlineDate + " " + onlineTime;
+        ajaxApi(zoom)
        // si_webpiS(url, msg, document.querySelector(".div_viewOClass"));
     }
     else {
@@ -41,4 +84,36 @@ function createOnlineClass(url) {
     }
 
     return false;
+}
+
+function ajaxApi(jsonObject) {
+    let xhhtp = new XMLHttpRequest();
+    xhhtp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            let jsonResponse = JSON.parse(xhhtp.responseText);
+            if (typeof jsonResponse === 'string') {//Check to see if the jsonResponse variable is still a string and not an object
+                jsonResponse = JSON.parse(jsonResponse
+                //Get response here
+            }
+        }
+    }
+    xhhtp.open("POST", '/api/zoom', true);
+    xhhtp.setRequestHeader("Content-type", "application/json");
+    xhhtp.send(JSON.stringify(jsonObject));
+}
+function fetchApi(jsonObject) {
+    fetch(/api/zoom, {
+        method: 'POST',
+        mode: 'cors',
+        cache: 'no-cache',
+        credentials: 'same-origin',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        redirect: 'follow',
+        referrerPolicy: 'no-referrer',
+        body: JSON.stringify(jsonObject)
+    }).then(response => response.json()).then(data => {
+        //Get response here
+    });
 }
