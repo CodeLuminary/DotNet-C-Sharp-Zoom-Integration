@@ -98,16 +98,7 @@ namespace ZoomIntegration2.Logic
             request.AddParameter("application/json", obj, ParameterType.RequestBody);
 
             var respon = client.Execute(request);
-            /* string res2 = respon.Content.Split('?')[0];
-             string[] resArr = res2.Split('/');
-             if (respon.IsSuccessful)
-             {
-                 return "1]" + resArr[resArr.Length - 1];
-             }
-             else
-             {
-                 return "0] ";
-             }*/
+          
             return respon.Content;
         }
     }

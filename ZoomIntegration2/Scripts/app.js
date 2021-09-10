@@ -76,8 +76,11 @@ function createOnlineClass() {
         zoom.muteStud = muteSt;
         zoom.allowstud = allowSt;
         zoom.start_time = onlineDate + " " + onlineTime;
-        ajaxApi(zoom)
-       // si_webpiS(url, msg, document.querySelector(".div_viewOClass"));
+        ajaxApi(zoom) //Use ajax
+        /* OR make use of fetch api 
+          fetchApi(zoom);
+         */
+
     }
     else {
         alert("Please fill in all inputs!");
