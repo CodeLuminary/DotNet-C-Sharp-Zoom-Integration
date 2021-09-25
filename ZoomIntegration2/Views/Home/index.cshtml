@@ -19,7 +19,7 @@
             <div class="col-md-2 col-sm-3 col-xs-12 col-lg-2 div_list deskNav" id="div_list">
                 <ul style="text-decoration: none;list-style-type:none" class="adminList">
                     <li class="li_separate"><a href="#" id="a_dashboard" onclick="ShowSelectedMenu(this.id,'#div_onlineClass')"><span class="glyphicon glyphicon-home" style="color:#811eb8"></span>&nbsp;&nbsp;HOST MEETING</a></li>
-                    <li><a href="#" id="a_schoolSettings" onclick="ShowSelectedMenu(this.id,'#div_studDetails')"><span class="glyphicon glyphicon-user" style="color:#811eb8"></span>&nbsp;&nbsp;CLIENT MEETING</a></li>
+                    <li><a href="#" id="a_schoolSettings" onclick="ShowSelectedMenu(this.id,'#div_meetingLogin')"><span class="glyphicon glyphicon-user" style="color:#811eb8"></span>&nbsp;&nbsp;MEETING LOGIN</a></li>
                 </ul>
             </div>
             <div id="div_mainContent" class="col-md-10 col-sm-12 col-xs-12 col-lg-10">
@@ -54,7 +54,18 @@
                         </div>
                     </div>
                 </div>
-
+                <div id="div_meetingLogin" class="horTab">
+                    <div>
+                        <ul>
+                            <li><a href="#" id="a_addOClass" class="btn btn-warning" onclick="ShowSubSelectedMenu(this.id, '#div_meetingLogin', '#div_mainMeetingLogin')">MEETING LOGIN</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div id="div_mainMeetingLogin" class="whiteBack">
+                            <a class="btn btn-danger" href="/meeting">Join meeting</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div id="myModal2" class="modal2">

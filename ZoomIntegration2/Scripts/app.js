@@ -95,7 +95,7 @@ function ajaxApi(jsonObject) {
         if (this.readyState == 4 && this.status == 200) {
             let jsonResponse = JSON.parse(xhhtp.responseText);
             if (typeof jsonResponse === 'string') {//Check to see if the jsonResponse variable is still a string and not an object
-                jsonResponse = JSON.parse(jsonResponse
+                jsonResponse = JSON.parse(jsonResponse)
                 //Get response here
             }
         }
@@ -105,7 +105,7 @@ function ajaxApi(jsonObject) {
     xhhtp.send(JSON.stringify(jsonObject));
 }
 function fetchApi(jsonObject) {
-    fetch(/api/zoom, {
+    fetch('/api/zoom', {
         method: 'POST',
         mode: 'cors',
         cache: 'no-cache',
